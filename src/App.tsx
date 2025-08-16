@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../src/App.css";
+import CurrentWeather from "./Component/SearchBar/CurrentWeather/CurrentWeather";
 import DailyForecast from "./Component/SearchBar/ForecastWeather/DailyForecast";
 import HourlyForecast from "./Component/SearchBar/ForecastWeather/HourlyForecast";
 import SearchBar from "./Component/SearchBar/SearchBar/SearchBar";
@@ -28,7 +29,7 @@ const App: React.FC = () => {
         onClick={() => getWeather(location)}
         value={location}
       />
-
+      {weather && <CurrentWeather data={weather.current} />}
       {weather?.dailyTemp && weather?.hourlyWeather && (
         <div className="forecast-row">
           <DailyForecast data={{ list: weather.dailyTemp }} />
