@@ -1,0 +1,147 @@
+
+.daily-forecast {
+  padding: 1rem;
+  background: #9fbbe6;
+  border-radius: 12px;
+  width: 100%; 
+  margin: 0;
+  box-sizing: border-box;
+  margin-top: 20px;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
+}
+
+.daily-title {
+  font-size: clamp(1.2rem, 4vw, 1.5rem); 
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #004e92; 
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.daily-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; 
+}
+
+.daily-item {
+  background: white;
+  border-radius: 10px;
+  padding: 0.75rem; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.daily-item:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.daily-icon {
+  width: clamp(40px, 8vw, 50px); 
+  height: clamp(40px, 8vw, 50px); 
+  object-fit: contain;
+}
+
+.daily-day {
+  font-weight: 600;
+  font-size: clamp(0.9rem, 3vw, 1rem); 
+  margin-left: 10px;
+  color: #004e92;
+  flex: 1;
+}
+
+.daily-desc {
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem); 
+  color: #555;
+  margin-left: 10px;
+  flex: 1.5;
+  font-style: italic;
+}
+
+.daily-temp {
+  font-weight: bold;
+  color: #0077ff;
+  margin-left: auto;
+  font-size: clamp(0.95rem, 3.5vw, 1.1rem); 
+  min-width: 70px; 
+  text-align: right;
+}
+
+.daily-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem); 
+  color: #444;
+  padding-left: 60px;
+  line-height: 1.5;
+}
+
+.daily-item.expanded .daily-details {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+
+@media (max-width: 900px) {
+  .daily-forecast {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .daily-item {
+    flex-wrap: wrap; 
+    padding: 0.6rem;
+  }
+
+  .daily-day,
+  .daily-desc,
+  .daily-temp {
+    margin-bottom: 4px;
+    flex: 1 1 100%;
+  }
+
+  .daily-temp {
+    text-align: left;
+    margin-left: 0;
+    padding-left: 60px;
+  }
+
+  .daily-details {
+    padding-left: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .daily-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .daily-day,
+  .daily-desc,
+  .daily-temp {
+    font-size: 0.85rem;
+  }
+
+  .daily-details {
+    padding-left: 45px;
+    font-size: 0.8rem;
+  }
+
+  .daily-item.expanded .daily-details {
+    padding-left: 45px;
+  }
+}
+
+

@@ -1,0 +1,150 @@
+
+.forecast-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px; 
+  margin: 30px auto;
+}
+
+
+.daily-forecast,
+.hourly-forecast {
+  padding: 1rem; 
+  background: #f7f9fc;
+  border-radius: 16px; 
+  flex: 1;
+  min-height: 450px; 
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.12); 
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.daily-forecast:hover,
+.hourly-forecast:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.daily-title,
+.hourly-title {
+  display: block;
+  font-size: 1.5rem; 
+  font-weight: bold;
+  margin: 10px 0 20px; 
+  text-align: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e6f2ff;
+  color: #004e92; 
+}
+
+
+.daily-list,
+.hourly-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+
+.daily-item,
+.hourly-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 12px 15px; 
+  border-radius: 10px; 
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.daily-item:hover,
+.hourly-item:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.hourly-time,
+.daily-day {
+  font-weight: bold;
+  color: #004e92; 
+  min-width: 80px; 
+}
+
+
+.hourly-temp,
+.daily-temp {
+  font-size: 1.1rem; 
+  color: #0077ff; 
+  font-weight: bold;
+  margin-left: auto;
+  min-width: 60px;
+  text-align: right;
+}
+
+.hourly-desc,
+.daily-desc {
+  font-size: 0.95rem; 
+  color: #555; 
+  flex: 1;
+  padding: 0 15px;
+  font-style: italic;
+}
+
+
+.hourly-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+
+@media (max-width: 900px) {
+  .forecast-row {
+    flex-direction: column;
+    gap: 25px; 
+  }
+
+  .hourly-forecast,
+  .daily-forecast {
+    max-width: 100%;
+    min-height: 400px;
+  }
+
+  .hourly-item,
+  .daily-item {
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .daily-title,
+  .hourly-title {
+    font-size: 1.3rem;
+  }
+  
+  .hourly-time,
+  .daily-day,
+  .hourly-desc,
+  .daily-desc,
+  .hourly-temp,
+  .daily-temp {
+    font-size: 0.9rem;
+  }
+  
+  .hourly-desc,
+  .daily-desc {
+    padding: 0 10px;
+  }
+}
