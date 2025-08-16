@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "../src/App.css";
-
-import DailyForecast from "./Component/SearchBar/Forecast/DailyForecast";
-import HourlyForecast from "./Component/SearchBar/Forecast/HourlyForecast";
+import DailyForecast from "./Component/SearchBar/ForecastWeather/DailyForecast";
+import HourlyForecast from "./Component/SearchBar/ForecastWeather/HourlyForecast";
 import SearchBar from "./Component/SearchBar/SearchBar/SearchBar";
 import { fetchWeather } from "./FetchWeather";
 
