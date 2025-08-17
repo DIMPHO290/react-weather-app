@@ -1,4 +1,4 @@
-/* SearchBar.css */
+
 .search-container {
   display: flex;
   max-width: 600px;
@@ -53,7 +53,7 @@
   font-size: 1rem;
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
   .search-container {
     flex-direction: column;
