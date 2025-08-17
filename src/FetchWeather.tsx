@@ -6,7 +6,7 @@ export const fetchWeather = async (searchData: string | null) => {
 
   try {
     const geoResponse = await axios.get(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${searchData}&limit=1&appid=${WEATHER_API_KEY}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${searchData}&limit=1&appid=${WEATHER_API_KEY}`
     );
     const geoResult = geoResponse.data?.[0];
     if (!geoResult) throw new Error("Location not found");
@@ -14,7 +14,7 @@ export const fetchWeather = async (searchData: string | null) => {
     const { lat, lon, name } = geoResult;
 
     const forecastFetch = await axios.get(
-      `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=metric`
     );
     const forecastData = forecastFetch.data?.list;
     if (!forecastData?.length) throw new Error("No forecast data");
