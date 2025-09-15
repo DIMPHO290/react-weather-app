@@ -21,6 +21,8 @@ Setup Instructions
 
 git clone https://github.com/DIMPHO290/react-weather-app.git
 cd react-weather-app
+code .
+git checkout dev
 npm install
 npm run dev
 
