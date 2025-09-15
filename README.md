@@ -20,17 +20,15 @@ Deployment: Netlify
 Setup Instructions
 
 git clone https://github.com/DIMPHO290/react-weather-app.git
-cd react-links-vault
+cd react-weather-app
 npm install
-npm create@vite.4.1.0 .
 npm run dev
 
 ### How add the AIP KEY to env file
 
 -create the .env file
 
--VITE_WEATHER_API_KEY= "USE_YOUR_OWN_API_KEY"
-npm start
+-VITE_WEATHER_API_KEY= "USE_YOUR_API_KEY"
 
 Screenshots :
 
