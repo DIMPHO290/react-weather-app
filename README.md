@@ -18,13 +18,14 @@ API: OpenWeather API
 Deployment: Netlify
 
 Setup Instructions
-
+```bash
 git clone https://github.com/DIMPHO290/react-weather-app.git
 cd react-weather-app
 code .
 git checkout dev
 npm install
 npm run dev
+```
 
 ### How add the AIP KEY to env file
 
