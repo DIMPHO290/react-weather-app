@@ -25,13 +25,13 @@ code .
 git checkout dev
 npm install
 npm run dev
-```
 
 ### How add the AIP KEY to env file
 
 -create the .env file
 
 -VITE_WEATHER_API_KEY= "USE_YOUR_API_KEY"
+```
 
 Screenshots :
 
