@@ -18,7 +18,7 @@ API: OpenWeather API
 Deployment: Netlify
 
 Setup Instructions
-
+```bash
 git clone https://github.com/DIMPHO290/react-weather-app.git
 cd react-weather-app
 code .
@@ -31,6 +31,7 @@ npm run dev
 -create the .env file
 
 -VITE_WEATHER_API_KEY= "USE_YOUR_API_KEY"
+```
 
 Screenshots :
 
