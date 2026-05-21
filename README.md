@@ -51,4 +51,4 @@ Screenshots :
 
 ### Live Demo on Netlify
 
-https://deploy-preview-6--helpful-crumble-ed9278.netlify.app/
+https://flourishing-malasada-09be9d.netlify.app/
